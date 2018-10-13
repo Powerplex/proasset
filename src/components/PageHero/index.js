@@ -1,19 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import "./styles.scss";
-import skyscrapers from "assets/images/bg-skyscrapers2.jpg";
 
 class PageHero extends React.Component {
   static propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string
   };
   render() {
-    const { title } = this.props;
+    const { title, img } = this.props;
     return (
-      <div className="PageHero">
+      <div className={classNames("PageHero", { withImage: !!img })}>
         <h1>{title}</h1>
-        <img className="PageHero__img" src={skyscrapers} alt="skyscrapers" />
+        {img && <img className="PageHero__img" src={img} alt="skyscrapers" />}
       </div>
     );
   }

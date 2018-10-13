@@ -2,3 +2,29 @@ $color-gold: rgb(221, 165, 32);
 $color-brown: rgb(96, 63, 35);
 $color-beige: beige;
 $color-white: white;
+
+$breakpoint-mobile: 320px;
+$breakpoint-mobile-landscape: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-landscape: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-large: 1500px;
+$breakpoint-dekstop-wide: 1920px;
+
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}

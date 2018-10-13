@@ -9,6 +9,9 @@ import imranPicture from "assets/images/team-imran.png";
 import brianPicture from "assets/images/team-brian.png";
 import robertPicture from "assets/images/team-robert.png";
 import hugoPicture from "assets/images/team-hugo.png";
+import skyscrapers from "assets/images/bg-skyscrapers2.jpg";
+
+import "./styles.scss";
 
 class Team extends React.Component {
   teamMembers = [
@@ -57,7 +60,7 @@ class Team extends React.Component {
     const { teamMembers } = this;
     return (
       <div className="Team">
-        <PageHero title="Our Power team" />
+        <PageHero title="Our Power team" img={skyscrapers} />
         <div className="TeamMembers">
           {teamMembers.map((member, i) => (
             <TeamMember key={i} {...member} />

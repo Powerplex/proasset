@@ -6,6 +6,7 @@ class Faq extends React.Component {
     return (
       <div className="Faq">
         <PageHero title="Frequently Asked Questions" />
+        <div>FAQ</div>
       </div>
     );
   }

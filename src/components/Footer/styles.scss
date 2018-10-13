@@ -1,0 +1,11 @@
+@import "styles/variables.scss";
+footer {
+  background-color: $color-brown;
+  min-height: 200px;
+
+  color: $color-white;
+}
+
+.Footer {
+  padding: 2rem;
+}

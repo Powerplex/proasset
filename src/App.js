@@ -7,6 +7,8 @@ import Team from "containers/Team";
 import Faq from "containers/Faq";
 import Contact from "containers/Contact";
 
+import Footer from "components/Footer";
+
 import "./styles/reset.scss";
 import "./styles/mobile-menu.scss";
 import "./styles/layout.scss";
@@ -49,6 +51,7 @@ class App extends Component {
 
     return (
       <div className="App" id="App">
+        <div className="device-tester" />
         <header className="App-header">
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat"
@@ -78,6 +81,7 @@ class App extends Component {
               {menu.map(({ path, component }) => (
                 <Route exact path={path} key={path} component={component} />
               ))}
+              <Footer />
             </div>
           </div>
         </div>
