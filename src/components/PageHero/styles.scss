@@ -1,0 +1,23 @@
+@import "styles/variables.scss";
+
+.PageHero {
+  background-color: $color-white;
+  position: relative;
+
+  h1 {
+    box-sizing: border-box;
+    color: $color-gold;
+    font-weight: bold;
+    font-size: 3rem;
+    padding: 2rem 5rem 2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.884);
+    position: absolute;
+    width: 100%;
+  }
+
+  .PageHero__img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

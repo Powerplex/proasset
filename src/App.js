@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import { scaleDown as Menu } from "react-burger-menu";
 
-import Home from "./containers/Home";
-import Team from "./containers/Team";
-import Faq from "./containers/Faq";
-import Contact from "./containers/Contact";
+import Home from "containers/Home";
+import Team from "containers/Team";
+import Faq from "containers/Faq";
+import Contact from "containers/Contact";
 
 import "./styles/reset.scss";
 import "./styles/mobile-menu.scss";
@@ -59,22 +59,27 @@ class App extends Component {
           right
           scaleDown
           pageWrapId={"main-container"}
-          outerContainerId={"App"}
+          outerContainerId={"outer-container"}
           isOpen={isMenuOpen}
           onStateChange={({ isOpen }) => {
             this.setState({ isMenuOpen: isOpen });
           }}
         >
+          <div className="menu-title">Pro Asset Investments</div>
           {menu.map(({ path, label }) => (
             <Link to={path} key={path} onClick={this.closeMenu}>
               {label}
             </Link>
           ))}
         </Menu>
-        <div id="main-container">
-          {menu.map(({ path, component }) => (
-            <Route exact path={path} component={component} />
-          ))}
+        <div id="outer-container">
+          <div id="main-container">
+            <div id="page-container">
+              {menu.map(({ path, component }) => (
+                <Route exact path={path} key={path} component={component} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );

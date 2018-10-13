@@ -1,0 +1,40 @@
+@import "styles/variables.scss";
+
+.TeamMember {
+  text-align: center;
+  background-color: white;
+  margin: 2rem;
+  // box-shadow: 0px 0px 5px 0px $color-gold;
+  padding: 1rem;
+  background-image: url("../../../src/assets/images/leaves-pattern.png");
+  box-shadow: inset 0px 0px 10px 0px #dad8d8;
+
+  img {
+    max-width: 165px;
+    border-radius: 50%;
+    margin: 1rem 0rem;
+  }
+
+  .TeamMember__name {
+    font-size: 2rem;
+    line-height: 3rem;
+    color: $color-gold;
+    font-weight: bold;
+  }
+
+  .TeamMember__job {
+    color: $color-brown;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 3rem;
+  }
+
+  .TeamMember__description {
+    font-style: italic;
+    background-color: white;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px 0px #cacaca;
+  }
+}

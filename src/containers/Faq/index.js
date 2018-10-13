@@ -1,8 +1,13 @@
 import React from "react";
+import PageHero from "components/PageHero";
 
 class Faq extends React.Component {
   render() {
-    return <p>FAQ page</p>;
+    return (
+      <div className="Faq">
+        <PageHero title="Frequently Asked Questions" />
+      </div>
+    );
   }
 }
 

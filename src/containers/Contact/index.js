@@ -1,8 +1,13 @@
 import React from "react";
+import PageHero from "components/PageHero";
 
 class Contact extends React.Component {
   render() {
-    return <p>Contact page</p>;
+    return (
+      <div className="Contact">
+        <PageHero title="Contact us " />
+      </div>
+    );
   }
 }
 
