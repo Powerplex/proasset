@@ -1,0 +1,25 @@
+@import "styles/variables.scss";
+
+.CatchPhrase {
+  background-color: $color-beige;
+  padding: 3rem;
+
+  border-left: 1rem solid $color-gold;
+  border-right: 1rem solid $color-gold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @include desktop {
+    border-left: 100rem solid $color-gold;
+    border-right: 100rem solid $color-gold;
+    margin-left: -100rem;
+    margin-right: -100rem;
+  }
+
+  .CatchPhrase__text {
+    color: $color-brown;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 4rem;
+  }
+}

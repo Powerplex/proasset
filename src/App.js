@@ -17,7 +17,7 @@ class App extends Component {
   menu = [
     {
       path: "/",
-      label: "Home",
+      label: "About Us",
       component: Home
     },
     {

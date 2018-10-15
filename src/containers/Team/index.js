@@ -1,6 +1,7 @@
 import React from "react";
 import PageHero from "components/PageHero";
 import TeamMember from "components/TeamMember";
+import CatchPhrase from "components/CatchPhrase";
 
 import { COMPANY_NAME } from "const";
 
@@ -60,7 +61,8 @@ class Team extends React.Component {
     const { teamMembers } = this;
     return (
       <div className="Team">
-        <PageHero title="Our Power team" img={skyscrapers} />
+        <PageHero title="Our Power team" />
+        <CatchPhrase text="We are here for you" />
         <div className="TeamMembers">
           {teamMembers.map((member, i) => (
             <TeamMember key={i} {...member} />
