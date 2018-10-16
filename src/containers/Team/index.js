@@ -2,6 +2,7 @@ import React from "react";
 import PageHero from "components/PageHero";
 import TeamMember from "components/TeamMember";
 import CatchPhrase from "components/CatchPhrase";
+import Section from "components/Section";
 
 import { COMPANY_NAME } from "const";
 
@@ -10,7 +11,6 @@ import imranPicture from "assets/images/team-imran.png";
 import brianPicture from "assets/images/team-brian.png";
 import robertPicture from "assets/images/team-robert.png";
 import hugoPicture from "assets/images/team-hugo.png";
-import skyscrapers from "assets/images/bg-skyscrapers2.jpg";
 
 import "./styles.scss";
 
@@ -63,11 +63,13 @@ class Team extends React.Component {
       <div className="Team">
         <PageHero title="Our Power team" />
         <CatchPhrase text="We are here for you" />
-        <div className="TeamMembers">
-          {teamMembers.map((member, i) => (
-            <TeamMember key={i} {...member} />
-          ))}
-        </div>
+        <Section>
+          <div className="TeamMembers">
+            {teamMembers.map((member, i) => (
+              <TeamMember key={i} {...member} />
+            ))}
+          </div>
+        </Section>
       </div>
     );
   }

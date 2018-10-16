@@ -2,8 +2,13 @@ import React from "react";
 import PageHero from "components/PageHero";
 import CatchPhrase from "components/CatchPhrase";
 import CompanyValue from "components/CompanyValue";
+import Section from "components/Section";
 
 import { COMPANY_NAME } from "const";
+
+import ImageProfessionalism from "assets/images/value-professionalism.png";
+import ImageProfitability from "assets/images/value-profitability.png";
+import ImageProtection from "assets/images/value-protection.png";
 
 import "./styles.scss";
 
@@ -12,11 +17,9 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <PageHero title="Pro Asset Investments" />
-        <CatchPhrase text="Some catchphrase" />
+        <CatchPhrase text="Let your savings work for you" />
         <div>
-          <p>Let your savings work for you !</p>
-          <div>
-            <h2>About Us</h2>
+          <Section title="About Us">
             <p>
               At {COMPANY_NAME}, we believe every under-utilised home can be
               converted into a valuable asset.
@@ -38,16 +41,15 @@ class Home extends React.Component {
               assets.
             </p>
             <img src="" alt="about-us" />
-          </div>
-          <div className="OurValues">
-            <h2 className="OurValues__title">Our values</h2>
+          </Section>
+          <Section title="Our Values">
             <CompanyValue
               title="Pro-fessionalism"
               text={[
                 "As a professional peroparty investment company operating in the UK, we care about quality.",
                 "Our company works closely with highly-experienced team intergrated into the English real-estate market for more than 10 years."
               ]}
-              img=""
+              img={ImageProfessionalism}
             />
             <CompanyValue
               title="Pro-fitability"
@@ -55,7 +57,7 @@ class Home extends React.Component {
                 "We firstly focus on providing quality houses in areas with strong rental demand and a lack of supply for the community.",
                 "We know that well-researched investments provide you with the safety and protection you need to reach your financial goals."
               ]}
-              img=""
+              img={ImageProfitability}
             />
             <CompanyValue
               title="Pro-tection"
@@ -63,12 +65,10 @@ class Home extends React.Component {
                 "For every property investment, we make a deap due diligence to ensure quality standards.",
                 "Each project is followed and secured by a solicitor. All our partnerships are authorized fully regulated by their respective third-party regulatory body to exercise."
               ]}
-              img=""
+              img={ImageProtection}
             />
-          </div>
-          <div>
-            <h2>Why Investing in the UK ?</h2>
-          </div>
+          </Section>
+          <Section title="Why Investing In The UK ?">TODO</Section>
         </div>
       </div>
     );

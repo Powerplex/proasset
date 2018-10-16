@@ -2,11 +2,23 @@
 
 .PageHero {
   background-color: $color-white;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 0.5rem solid $color-gold;
+
+  .PageHero__logo {
+    max-height: 7rem;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid red;
+    }
+  }
 
   h1 {
     box-sizing: border-box;
     color: $color-gold;
-    border-bottom: 0.5rem solid;
+
     font-weight: bold;
     font-size: 3rem;
     padding: 2rem 5rem 2rem 1rem;

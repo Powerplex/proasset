@@ -13,15 +13,15 @@ class CompanyValue extends React.Component {
     const { title, text, img } = this.props;
     return (
       <div className="CompanyValue">
-        <h3 className="CompanyValue__title">{title}</h3>
         <div className="CompanyValue__content">
+          <h3 className="CompanyValue__title">{title}</h3>
           <div className="CompanyValue__content__text">
-            {text.map(paragraph => (
-              <p>{paragraph}</p>
+            {text.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
             ))}
           </div>
-          {img !== undefined && <img src={img} alt={title} />}
         </div>
+        {img !== undefined && <img src={img} alt={title} />}
       </div>
     );
   }

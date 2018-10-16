@@ -1,0 +1,44 @@
+@import "styles/variables.scss";
+
+.SectionTitle {
+  font-size: 5rem;
+  color: $color-gold;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  align-items: center;
+  display: flex;
+
+  border-bottom: 0.5rem solid $color-brown;
+  box-shadow: 0px 15px 10px -13px grey;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .SectionTitleDecoration {
+    transition: all 0.5s ease;
+    position: relative;
+    min-width: 2rem;
+    height: 2rem;
+    border: 0.3rem solid $color-gold;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+
+    @include desktop {
+      margin-left: -1rem;
+    }
+
+    &::after {
+      content: "";
+      width: 1000rem;
+      margin-left: calc(-1000rem - 0.3rem);
+      position: absolute;
+      height: 0.3rem;
+      background-color: $color-gold;
+      border-bottom: 0.2rem solid $color-white;
+    }
+  }
+}
