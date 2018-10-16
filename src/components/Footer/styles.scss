@@ -1,9 +1,7 @@
 @import "styles/variables.scss";
 footer {
   background-color: $color-brown;
-  min-height: 200px;
   text-align: center;
-
   color: $color-white;
 }
 
@@ -12,4 +10,17 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-align: justify;
+
+  p {
+    border-bottom: 0.2rem solid $color-gold;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  p:last-child {
+    border-bottom: 0px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
