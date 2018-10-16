@@ -1,8 +1,11 @@
 import React from "react";
 import PageHero from "components/PageHero";
 import CatchPhrase from "components/CatchPhrase";
+import CompanyValue from "components/CompanyValue";
 
 import { COMPANY_NAME } from "const";
+
+import "./styles.scss";
 
 class Home extends React.Component {
   render() {
@@ -36,59 +39,32 @@ class Home extends React.Component {
             </p>
             <img src="" alt="about-us" />
           </div>
-          <div>
-            <h2>Our values</h2>
-            <div>
-              <h3>Pro-fessionalism</h3>
-              <div>
-                <div>
-                  <p>
-                    As a professional peroparty investment company operating in
-                    the UK, we care about quality.
-                  </p>
-                  <p>
-                    Our company works closely with highly-experienced team
-                    intergrated into the English real-estate market for more
-                    than 10 years.
-                  </p>
-                </div>
-                <img src="" alt="professionalism" />
-              </div>
-            </div>
-            <div>
-              <h3>Pro-fitability</h3>
-              <div>
-                <div>
-                  <p>
-                    We firstly focus on providing quality houses in areas with
-                    strong rental demand and a lack of supply for the community.
-                  </p>
-                  <p>
-                    We know that well-researched investments provide you with
-                    the safety and protection you need to reach your financial
-                    goals.
-                  </p>
-                </div>
-                <img src="" alt="profitability" />
-              </div>
-            </div>
-            <div>
-              <h3>Pro-tection</h3>
-              <div>
-                <div>
-                  <p>
-                    For every property investment, we make a deap due diligence
-                    to ensure quality standards.
-                  </p>
-                  <p>
-                    Each project is followed and secured by a solicitor. All our
-                    partnerships are authorized fully regulated by their
-                    respective third-party regulatory body to exercise.
-                  </p>
-                </div>
-                <img src="" alt="protection" />
-              </div>
-            </div>
+          <div className="OurValues">
+            <h2 className="OurValues__title">Our values</h2>
+            <CompanyValue
+              title="Pro-fessionalism"
+              text={[
+                "As a professional peroparty investment company operating in the UK, we care about quality.",
+                "Our company works closely with highly-experienced team intergrated into the English real-estate market for more than 10 years."
+              ]}
+              img=""
+            />
+            <CompanyValue
+              title="Pro-fitability"
+              text={[
+                "We firstly focus on providing quality houses in areas with strong rental demand and a lack of supply for the community.",
+                "We know that well-researched investments provide you with the safety and protection you need to reach your financial goals."
+              ]}
+              img=""
+            />
+            <CompanyValue
+              title="Pro-tection"
+              text={[
+                "For every property investment, we make a deap due diligence to ensure quality standards.",
+                "Each project is followed and secured by a solicitor. All our partnerships are authorized fully regulated by their respective third-party regulatory body to exercise."
+              ]}
+              img=""
+            />
           </div>
           <div>
             <h2>Why Investing in the UK ?</h2>
