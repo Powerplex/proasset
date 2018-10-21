@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
+import { FaEnvelope } from "react-icons/fa";
 
 import "./styles.scss";
 
@@ -16,14 +17,10 @@ class DesktopMenu extends React.Component {
       <div className="DesktopMenu">
         <Centered>
           <div className="DesktopMenu__content">
-            {menu.map(({ path, label }) => (
-              <NavLink
-                exact
-                to={path}
-                key={path}
-                // onClick={onClose}
-                activeClassName="active"
-              >
+            {menu.map(({ path, label }, index) => (
+              <NavLink exact to={path} key={path} activeClassName="active">
+                {index + 1 === menu.length && <FaEnvelope />}
+
                 {label}
               </NavLink>
             ))}

@@ -2,12 +2,14 @@
 
 .DesktopMenu {
   display: none;
+
   @include desktop {
     display: flex;
     flex-direction: row;
     justify-content: right;
   }
 
+  z-index: 1000;
   position: fixed;
   top: 0;
   width: 100%;
@@ -29,13 +31,30 @@
       &:hover {
         color: $color-gold;
       }
+
+      &.active {
+        color: $color-gold;
+      }
     }
 
     a:last-child {
-      background-color: $color-gold;
+      display: flex;
+      background-color: $color-white;
+      color: $color-gold;
       font-weight: bold;
+      border-radius: 0.5rem;
+
+      svg {
+        margin-right: 1rem;
+      }
       &:hover {
-        color: $color-brown;
+        color: $color-white;
+        background-color: $color-gold;
+      }
+
+      &.active {
+        color: $color-white;
+        background-color: $color-gold;
       }
     }
   }
