@@ -1,10 +1,9 @@
 @import "styles/variables.scss";
 
 .PageHero {
-  background-color: $color-white;
-  display: flex;
-  flex-direction: row;
-  border-bottom: 0.5rem solid $color-gold;
+  @include desktop {
+    padding-top: 6rem;
+  }
 
   .PageHero__logo {
     max-height: 7rem;
@@ -16,14 +15,25 @@
   }
 
   h1 {
+    // position
     box-sizing: border-box;
-    color: $color-gold;
-
     font-weight: bold;
-    font-size: 3rem;
-    padding: 2rem 5rem 2rem 1rem;
-    background-color: rgba(255, 255, 255, 0.884);
     width: 100%;
+    font-size: 5rem;
+    line-height: 7rem;
+    padding: 2rem 5rem 2rem 1rem;
+
+    // style
+    color: $color-white;
+    text-decoration: underline;
+    text-decoration-color: $color-gold;
+    text-shadow: 0px 0px 10px black;
+
+    @include desktop {
+      font-size: 8rem;
+      line-height: 10rem;
+      padding: 2rem 5rem 2rem 0rem;
+    }
   }
 
   &.withImage {

@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import { scaleDown as Menu } from "react-burger-menu";
+import { Route } from "react-router-dom";
+// import { scaleDown as BurgerMenu } from "react-burger-menu";
 
 import Home from "containers/Home";
 import Team from "containers/Team";
 import Faq from "containers/Faq";
 import Contact from "containers/Contact";
 
+import DesktopMenu from "components/DesktopMenu";
+import BurgerMenu from "components/BurgerMenu";
 import Footer from "components/Footer";
 
 import "./styles/reset.scss";
-import "./styles/mobile-menu.scss";
 import "./styles/layout.scss";
 
 class App extends Component {
@@ -41,8 +42,12 @@ class App extends Component {
     isMenuOpen: false
   };
 
-  closeMenu = e => {
+  closeBurgerMenu = () => {
     this.setState({ isMenuOpen: false });
+  };
+
+  handleBurgerMenu = ({ isOpen }) => {
+    this.setState({ isMenuOpen: isOpen });
   };
 
   render() {
@@ -51,30 +56,20 @@ class App extends Component {
 
     return (
       <div className="App" id="App">
-        <div className="device-tester" />
         <header className="App-header">
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat"
             rel="stylesheet"
           />
         </header>
-        <Menu
-          right
-          scaleDown
-          pageWrapId={"main-container"}
-          outerContainerId={"outer-container"}
-          isOpen={isMenuOpen}
-          onStateChange={({ isOpen }) => {
-            this.setState({ isMenuOpen: isOpen });
-          }}
-        >
-          <div className="menu-title">Pro Asset Investments</div>
-          {menu.map(({ path, label }) => (
-            <Link to={path} key={path} onClick={this.closeMenu}>
-              {label}
-            </Link>
-          ))}
-        </Menu>
+        <DesktopMenu menu={menu} />
+        <BurgerMenu
+          menu={menu}
+          onChange={this.handleBurgerMenu}
+          onClose={this.closeBurgerMenu}
+          isMenuOpen={isMenuOpen}
+        />
+
         <div id="outer-container">
           <div id="main-container">
             <div id="page-container">

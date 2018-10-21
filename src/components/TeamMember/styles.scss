@@ -15,16 +15,14 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  @include mobile {
-    width: calc(100% - 1rem);
-  }
+  width: calc(100% - 1rem);
+
   @include tablet {
     width: 40%;
-    display: inline-block;
   }
+
   @include desktop {
     width: 30%;
-    display: inline-block;
   }
 
   img {

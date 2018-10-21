@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import SectionTitle from "components/SectionTitle";
+import Centered from "components/Centered";
 
 import "./styles.scss";
 
@@ -13,8 +14,10 @@ class Section extends Component {
     const { children, title } = this.props;
     return (
       <div className="Section">
-        {title && <SectionTitle text={title} />}
-        {children}
+        <Centered>
+          {title && <SectionTitle text={title} />}
+          {children}
+        </Centered>
       </div>
     );
   }

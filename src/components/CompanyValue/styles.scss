@@ -1,13 +1,27 @@
 @import "styles/variables.scss";
 
 .CompanyValue {
-  box-sizing: border-box;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
   padding: 1rem;
-  // background-color: $color-white;
   margin-bottom: 2rem;
+
+  @include tablet {
+    flex-direction: row;
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @include desktop {
+    flex-direction: row;
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
 
   .CompanyValue__title {
     font-size: 4rem;
@@ -16,10 +30,9 @@
   }
 
   .CompanyValue__content {
-    padding: 1rem;
-    background-color: $color-beige;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 1rem;
 
     .CompanyValue__content__text {
       background-color: $color-white;
@@ -28,5 +41,9 @@
       line-height: 2rem;
       text-align: justify;
     }
+  }
+
+  img {
+    max-height: 150px;
   }
 }

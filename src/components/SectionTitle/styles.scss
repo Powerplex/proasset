@@ -8,6 +8,7 @@
   margin-bottom: 2rem;
 
   align-items: center;
+  position: relative;
   display: flex;
 
   border-bottom: 0.5rem solid $color-brown;
@@ -15,11 +16,12 @@
 
   h2 {
     font-size: 3rem;
+    padding-left: 5rem;
   }
 
   .SectionTitleDecoration {
+    position: absolute;
     transition: all 0.5s ease;
-    position: relative;
     min-width: 2rem;
     height: 2rem;
     border: 0.3rem solid $color-gold;

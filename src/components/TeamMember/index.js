@@ -16,7 +16,7 @@ class TeamMember extends React.Component {
     return (
       <div className="TeamMember">
         <div className="TeamMember__name">
-          <span>{firstname.toUpperCase()}</span>{" "}
+          <div>{firstname.toUpperCase()}</div>{" "}
           <span>{lastname.toUpperCase()}</span>
         </div>
         <p className="TeamMember__job">- {job} -</p>

@@ -1,28 +1,22 @@
 @import "styles/variables.scss";
 
 .Section {
-  margin: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   background-color: $color-white;
 
   @include desktop {
     padding: 2rem;
   }
 
-  @include desktop {
-    &:hover {
-      .SectionTitleDecoration {
-        background-color: $color-gold;
-        margin-left: 1rem;
-      }
+  &:hover {
+    .SectionTitleDecoration {
+      background-color: $color-gold;
+      margin-left: 1rem;
     }
   }
 
-  > p {
-    font-size: 2rem;
+  .Centered > p {
     text-align: justify;
-    line-height: 2.5rem;
-    padding-bottom: 1rem;
 
     span {
       font-weight: bold;

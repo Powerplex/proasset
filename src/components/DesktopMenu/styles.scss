@@ -1,0 +1,42 @@
+@import "styles/variables.scss";
+
+.DesktopMenu {
+  display: none;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  }
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.726);
+  padding: 1rem 0rem;
+
+  .DesktopMenu__content {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      padding: 1rem;
+      color: $color-white;
+      font-size: 2rem;
+      margin-right: 1rem;
+      text-decoration: none;
+      transition-duration: 0.3s;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+
+    a:last-child {
+      background-color: $color-gold;
+      font-weight: bold;
+      &:hover {
+        color: $color-brown;
+      }
+    }
+  }
+}

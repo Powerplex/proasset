@@ -3,12 +3,15 @@ import PageHero from "components/PageHero";
 import CatchPhrase from "components/CatchPhrase";
 import CompanyValue from "components/CompanyValue";
 import Section from "components/Section";
+import ImageSeparator from "components/ImageSeparator";
 
 import { COMPANY_NAME } from "const";
 
 import ImageProfessionalism from "assets/images/value-professionalism.png";
 import ImageProfitability from "assets/images/value-profitability.png";
 import ImageProtection from "assets/images/value-protection.png";
+import bgSunset from "assets/images/bg-sunset.png";
+import bgStreet from "assets/images/bg-street.png";
 
 import "./styles.scss";
 
@@ -18,11 +21,11 @@ class Home extends React.Component {
       <div className="Home">
         <PageHero title="Pro Asset Investments" />
         <CatchPhrase text="Let your savings work for you" />
-        <div>
+        <div className="Home__content">
           <Section title="About Us">
             <p>
-              At {COMPANY_NAME}, we believe every under-utilised home can be
-              converted into a valuable asset.
+              At <span>{COMPANY_NAME}</span>, we believe every under-utilised
+              home can be converted into a valuable asset.
             </p>
             <p>
               We specialise in acquiring smelly houses and houses of multiple
@@ -40,18 +43,19 @@ class Home extends React.Component {
               is driven by our purpose to create quality homes for quality
               assets.
             </p>
-            <img src="" alt="about-us" />
           </Section>
+          <ImageSeparator src={bgSunset} />
           <Section title="Our Values">
             <CompanyValue
               title="Pro-fessionalism"
               text={[
-                "As a professional peroparty investment company operating in the UK, we care about quality.",
+                "As a professional property investment company operating in the UK, we care about quality.",
                 "Our company works closely with highly-experienced team intergrated into the English real-estate market for more than 10 years."
               ]}
               img={ImageProfessionalism}
             />
             <CompanyValue
+              reverse
               title="Pro-fitability"
               text={[
                 "We firstly focus on providing quality houses in areas with strong rental demand and a lack of supply for the community.",
@@ -68,6 +72,7 @@ class Home extends React.Component {
               img={ImageProtection}
             />
           </Section>
+          <ImageSeparator src={bgStreet} />
           <Section title="Why Investing In The UK ?">TODO</Section>
         </div>
       </div>
