@@ -1,0 +1,39 @@
+@import "styles/variables.scss";
+
+.ContactShortcut__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: $color-gold;
+  align-items: center;
+  padding: 3rem;
+  margin: 3rem 0rem;
+  color: $color-white;
+  font-weight: bold;
+  border: 0.5rem solid $color-white;
+
+  p {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  a {
+    transition-duration: 0.3s;
+    display: flex;
+    text-decoration: none;
+    color: $color-brown;
+    background-color: $color-white;
+    padding: 2rem;
+    font-size: 3rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    svg {
+      margin-right: 1rem;
+    }
+  }
+
+  a:hover {
+    color: $color-white;
+    background-color: $color-brown;
+  }
+}

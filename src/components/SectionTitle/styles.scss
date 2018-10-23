@@ -11,12 +11,13 @@
   position: relative;
   display: flex;
 
-  border-bottom: 0.5rem solid $color-brown;
-  box-shadow: 0px 15px 10px -13px grey;
+  // border-bottom: 0.5rem solid $color-brown;
+  // box-shadow: 0px 15px 10px -13px grey;
 
   h2 {
     font-size: 3rem;
-    padding-left: 5rem;
+    text-align: justify;
+    // padding-left: 5rem;
   }
 
   .SectionTitleDecoration {
@@ -25,7 +26,8 @@
     min-width: 2rem;
     height: 2rem;
     border: 0.3rem solid $color-gold;
-    margin-right: 2rem;
+    // margin-right: 2rem;
+    left: -5rem;
     display: flex;
     align-items: center;
 

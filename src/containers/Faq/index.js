@@ -1,6 +1,7 @@
 import React from "react";
 import PageHero from "components/PageHero";
 import Section from "components/Section";
+import ContactShortcut from "components/ContactShortcut";
 
 import { COMPANY_NAME } from "const";
 
@@ -60,6 +61,7 @@ class Faq extends React.Component {
             tax, financial or investment advice when necessary.
           </p>
         </Section>
+        <ContactShortcut />
       </div>
     );
   }

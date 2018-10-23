@@ -9,7 +9,7 @@ import Centered from "components/Centered";
 
 class DesktopMenu extends React.Component {
   static propTypes = {
-    menu: PropTypes.object.isRequired
+    menu: PropTypes.array.isRequired
   };
   render() {
     const { menu } = this.props;
@@ -18,7 +18,13 @@ class DesktopMenu extends React.Component {
         <Centered>
           <div className="DesktopMenu__content">
             {menu.map(({ path, label }, index) => (
-              <NavLink exact to={path} key={path} activeClassName="active">
+              <NavLink
+                exact
+                to={path}
+                key={path}
+                activeClassName="active"
+                onClick={() => window.scrollTo(0, 0)}
+              >
                 {index + 1 === menu.length && <FaEnvelope />}
 
                 {label}

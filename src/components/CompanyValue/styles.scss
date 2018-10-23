@@ -6,7 +6,6 @@
   align-items: center;
   box-sizing: border-box;
   width: 100%;
-  padding: 1rem;
   margin-bottom: 2rem;
 
   @include tablet {
@@ -25,18 +24,18 @@
 
   .CompanyValue__title {
     font-size: 4rem;
-    color: $color-gold;
-    padding-bottom: 1rem;
+    color: $color-brown;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-weight: bold;
   }
 
   .CompanyValue__content {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
 
     .CompanyValue__content__text {
       background-color: $color-white;
-      padding: 1rem;
       border-radius: 0rem;
       line-height: 2rem;
       text-align: justify;

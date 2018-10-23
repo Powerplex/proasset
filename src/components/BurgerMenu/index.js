@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { scaleDown as MobileMenu } from "react-burger-menu";
+import { slide as MobileMenu } from "react-burger-menu";
 import { NavLink } from "react-router-dom";
 
 import "./styles.scss";
 
 class BurgerMenu extends React.Component {
   static propTypes = {
-    menu: PropTypes.object.isRequired,
+    menu: PropTypes.array.isRequired,
     onChange: PropTypes.func.isRequired,
     onClose: PropTypes.func.isRequired,
     isMenuOpen: PropTypes.bool

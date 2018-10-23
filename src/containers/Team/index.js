@@ -3,6 +3,7 @@ import PageHero from "components/PageHero";
 import TeamMember from "components/TeamMember";
 import CatchPhrase from "components/CatchPhrase";
 import Section from "components/Section";
+import ContactShortcut from "components/ContactShortcut";
 
 import { COMPANY_NAME } from "const";
 
@@ -70,6 +71,7 @@ class Team extends React.Component {
             ))}
           </div>
         </Section>
+        <ContactShortcut />
       </div>
     );
   }

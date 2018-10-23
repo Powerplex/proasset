@@ -6,12 +6,11 @@
 
   @include desktop {
     padding: 2rem;
-  }
-
-  &:hover {
-    .SectionTitleDecoration {
-      background-color: $color-gold;
-      margin-left: 1rem;
+    &:hover {
+      .SectionTitleDecoration {
+        background-color: $color-gold;
+        margin-left: 1rem;
+      }
     }
   }
 

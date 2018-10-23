@@ -3,6 +3,7 @@ import PageHero from "components/PageHero";
 import CatchPhrase from "components/CatchPhrase";
 import CompanyValue from "components/CompanyValue";
 import Section from "components/Section";
+import ContactShortcut from "components/ContactShortcut";
 import ImageSeparator from "components/ImageSeparator";
 
 import { COMPANY_NAME } from "const";
@@ -22,11 +23,10 @@ class Home extends React.Component {
         <PageHero title="Pro Asset Investments" />
         <CatchPhrase text="Let your savings work for you" />
         <div className="Home__content">
-          <Section title="About Us">
-            <p>
-              At <span>{COMPANY_NAME}</span>, we believe every under-utilised
-              home can be converted into a valuable asset.
-            </p>
+          <Section
+            title={`At ${COMPANY_NAME}, we believe every under-utilised
+              home can be converted into a valuable asset.`}
+          >
             <p>
               We specialise in acquiring smelly houses and houses of multiple
               occupations and valorize them into quality and functional houses
@@ -74,6 +74,7 @@ class Home extends React.Component {
           </Section>
           <ImageSeparator src={bgStreet} />
           <Section title="Why Investing In The UK ?">TODO</Section>
+          <ContactShortcut />
         </div>
       </div>
     );

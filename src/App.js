@@ -44,6 +44,7 @@ class App extends Component {
 
   closeBurgerMenu = () => {
     this.setState({ isMenuOpen: false });
+    window.scrollTo(0, 0);
   };
 
   handleBurgerMenu = ({ isOpen }) => {
