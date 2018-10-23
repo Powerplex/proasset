@@ -32,7 +32,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: $color-white;
+  background: #190101cc;
   padding: 2rem 0rem 0rem 2rem;
   font-size: 1.15em;
 }
@@ -53,23 +53,25 @@
   font-size: 3rem;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 /* Individual item */
 a.bm-item {
-  color: $color-gold;
+  color: $color-white;
   text-decoration: none;
   font-size: 3rem;
   line-height: 5rem;
   margin-bottom: 1rem;
-  background-color: $color-beige;
+  // background-color: $color-beige;
   padding-left: 1rem;
-  font-weight: bold;
-  box-shadow: inset 0px 2.5rem 0px 0px $color-white;
+  // font-weight: bold;
+  // box-shadow: inset 0px 2.5rem 0px 0px $color-white;
 
   &.active {
-    color: $color-brown;
-    border-left: 0.5rem solid $color-brown;
+    color: $color-white;
+    font-weight: bold;
+    border-left: 0.5rem solid $color-gold;
   }
 }
 

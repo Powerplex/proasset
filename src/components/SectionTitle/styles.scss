@@ -28,10 +28,11 @@
     border: 0.3rem solid $color-gold;
     // margin-right: 2rem;
     left: -5rem;
-    display: flex;
+    display: none;
     align-items: center;
 
     @include desktop {
+      display: flex;
       margin-left: -1rem;
     }
 
