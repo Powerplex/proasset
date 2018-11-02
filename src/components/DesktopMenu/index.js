@@ -45,7 +45,7 @@ class DesktopMenu extends React.Component {
               onClick={() => window.scrollTo(0, 0)}
             >
               <img src={logo} alt="logo desktop" />
-              <p>{COMPANY_NAME}</p>
+              {/* <p>{COMPANY_NAME}</p> */}
             </NavLink>
             {menu.map(({ path, label }, index) => (
               <NavLink

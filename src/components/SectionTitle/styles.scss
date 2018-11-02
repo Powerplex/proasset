@@ -10,9 +10,14 @@
   top: 0;
   position: sticky;
   display: flex;
+  justify-content: center;
 
   h2 {
     font-size: 3rem;
+    @include desktop {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
   }
 
   .SectionTitleDecoration {
@@ -25,10 +30,10 @@
     display: none;
     align-items: center;
 
-    @include desktop {
-      display: flex;
-      margin-left: -1rem;
-    }
+    // @include desktop {
+    //   display: flex;
+    //   margin-left: -1rem;
+    // }
 
     &::after {
       content: "";

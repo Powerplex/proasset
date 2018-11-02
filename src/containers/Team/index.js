@@ -36,7 +36,10 @@ class Team extends React.Component {
       job: "Non Executive Director",
       description:
         "Professional investor for a decade and mentor, Imran has a guenuine and high valuable experience in the UK property investment process."
-    },
+    }
+  ];
+
+  teamMembers2 = [
     {
       picture: brianPicture,
       firstname: "Brian",
@@ -100,7 +103,7 @@ class Team extends React.Component {
   ];
 
   render() {
-    const { teamMembers } = this;
+    const { teamMembers, teamMembers2 } = this;
     return (
       <div className="AboutUs">
         <PageHero title="About Us" />
@@ -118,6 +121,11 @@ class Team extends React.Component {
         <Section title="Our Team" theme="white" transition={{ from: "beige" }}>
           <div className="TeamMembers">
             {teamMembers.map((member, i) => (
+              <TeamMember key={i} {...member} />
+            ))}
+          </div>
+          <div className="TeamMembers">
+            {teamMembers2.map((member, i) => (
               <TeamMember key={i} {...member} />
             ))}
           </div>

@@ -17,7 +17,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <PageHero
-          title={COMPANY_NAME}
+          title={COMPANY_NAME.toUpperCase()}
           subtitle={"Let your savings work for you"}
         />
         {/* <CatchPhrase text="Let your savings work for you" /> */}
