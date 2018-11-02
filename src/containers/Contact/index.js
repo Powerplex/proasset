@@ -22,7 +22,7 @@ class Contact extends React.Component {
     return (
       <div className="Contact">
         <PageHero title="Contact us" />
-        <Section title="Our Address">
+        <Section>
           <div className="ContactInformations">
             <div className="ContactAdress">
               <p className="ContactAdress__company">{COMPANY_NAME}</p>
@@ -34,26 +34,21 @@ class Contact extends React.Component {
           </div>
         </Section>
         <Section
-          title="Email"
           theme="beige"
-          transition={{ from: "white", reversed: false }}
+          // transition={{ from: "white", reversed: false }}
         >
           <p className="ContactEmail">
             <FaEnvelope />
-            Email: {this.email}
+            {this.email}
           </p>
         </Section>
-        <Section title="Phone Number" transition={{ from: "beige" }}>
+        <Section transition={{ from: "beige" }}>
           <p className="ContactPhone">
             <FaPhone />
             {this.phoneNumber}
           </p>
         </Section>
-        <Section
-          title="Locate Us"
-          theme="beige"
-          transition={{ from: "white", reversed: true }}
-        >
+        <Section title="Locate Us" theme="beige">
           {this.renderMap()}
         </Section>
       </div>

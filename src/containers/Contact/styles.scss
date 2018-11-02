@@ -26,9 +26,17 @@
 .ContactEmail,
 .ContactPhone {
   border-radius: 1rem;
-  line-height: 6rem;
   font-weight: normal;
-  font-size: 3rem;
+  text-align: center !important;
+  font-size: 2.5rem;
+
+  @include desktop {
+    font-size: 3rem;
+  }
+
+  svg {
+    margin-bottom: 2rem;
+  }
 }
 
 .Map {
