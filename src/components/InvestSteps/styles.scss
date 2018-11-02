@@ -1,0 +1,125 @@
+@import "styles/variables.scss";
+
+$losange-width: 3rem;
+$losange-border: 0.4rem;
+$losange-fill: $color-beige;
+
+.InvestSteps {
+  display: flex;
+  flex-direction: column;
+  // background-color: white;
+
+  > img {
+    width: 100px;
+    margin: auto;
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+}
+
+.InvestSteps__step {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  @include desktop {
+    &.InvestSteps__step-left {
+      flex-direction: row;
+      text-align: right;
+      > p {
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        margin-left: calc(#{$losange-border} / 2);
+        border-right: $losange-border solid $color-gold;
+        box-shadow: -4px 0px 10px -7px;
+      }
+
+      .InvestSteps__step-losange {
+        border-top: $losange-border solid $losange-fill;
+        border-right: $losange-border solid $losange-fill;
+        border-bottom: $losange-border solid $color-gold;
+        border-left: $losange-border solid $color-gold;
+      }
+
+      .InvestSteps__step-index p {
+        margin-left: 2rem;
+      }
+    }
+
+    &.InvestSteps__step-right {
+      flex-direction: row-reverse;
+      text-align: left;
+      > p {
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        margin-right: calc(#{$losange-border} / 2);
+        border-left: $losange-border solid $color-gold;
+        box-shadow: 4px 0px 10px -7px;
+      }
+      .InvestSteps__step-losange {
+        border-top: $losange-border solid $color-gold;
+        border-right: $losange-border solid $color-gold;
+        border-bottom: $losange-border solid $losange-fill;
+        border-left: $losange-border solid $losange-fill;
+      }
+
+      .InvestSteps__step-index p {
+        margin-left: -2rem;
+      }
+    }
+  }
+
+  > p {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+
+    @include desktop {
+      padding: 4rem 2rem;
+      width: 50%;
+    }
+
+    box-sizing: border-box;
+    padding-left: $losange-width;
+    padding-right: $losange-width;
+  }
+
+  .InvestSteps__step-index {
+    position: relative;
+    height: $losange-width;
+    width: $losange-width;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
+    p {
+      position: absolute;
+      height: $losange-width;
+      width: $losange-width;
+      text-align: center;
+      line-height: $losange-width;
+      color: $color-gold;
+      font-size: 2rem;
+      font-weight: bold;
+      background-color: #dda520;
+      color: white;
+      border-radius: 100%;
+      box-sizing: border-box;
+    }
+
+    .InvestSteps__step-losange {
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: $losange-width;
+      width: $losange-width;
+      background-color: $losange-fill;
+      transform: rotate(45deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

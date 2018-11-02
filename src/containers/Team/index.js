@@ -1,9 +1,9 @@
 import React from "react";
 import PageHero from "components/PageHero";
 import TeamMember from "components/TeamMember";
-import CatchPhrase from "components/CatchPhrase";
 import Section from "components/Section";
 import ContactShortcut from "components/ContactShortcut";
+import CompanyValue from "components/CompanyValue";
 
 import { COMPANY_NAME } from "const";
 
@@ -12,6 +12,10 @@ import imranPicture from "assets/images/team-imran.png";
 import brianPicture from "assets/images/team-brian.png";
 import robertPicture from "assets/images/team-robert.png";
 import hugoPicture from "assets/images/team-hugo.png";
+import ImageProfessionalism from "assets/images/value-professionalism.png";
+import ImageProfitability from "assets/images/value-profitability.png";
+import ImageProtection from "assets/images/value-protection.png";
+import bgStreet from "assets/images/bg-street.png";
 
 import "./styles.scss";
 
@@ -58,20 +62,63 @@ class Team extends React.Component {
     }
   ];
 
+  renderValue({ title, text, img }) {
+    return <CompanyValue title={title} text={text} img={img} />;
+  }
+
+  values = [
+    {
+      title: "Pro-fessionalism",
+      text: [
+        "As a professional property investment company operating in the UK, we care about quality.",
+        "Our company works closely with highly-experienced team intergrated into the English real-estate market for more than 10 years."
+      ],
+      img: ImageProfessionalism
+    },
+    {
+      title: "Pro-fitability",
+      text: [
+        "We firstly focus on providing quality houses in areas with strong rental demand and a lack of supply for the community.",
+        "We know that well-researched investments provide you with the safety and protection you need to reach your financial goals."
+      ],
+      img: ImageProfitability
+    },
+    {
+      title: "Pro-tection",
+      text: [
+        "For every property investment, we make a deap due diligence to ensure quality standards.",
+        "Each project is followed and secured by a solicitor. All our partnerships are authorized fully regulated by their respective third-party regulatory body to exercise."
+      ],
+      img: ImageProtection
+    }
+  ];
+
   render() {
     const { teamMembers } = this;
     return (
-      <div className="Team">
-        <PageHero title="Our Power team" />
-        <CatchPhrase text="We are here for you" />
-        <Section>
+      <div className="AboutUs">
+        <PageHero title="About Us" />
+        {/* <CatchPhrase text="We are here for you" /> */}
+        <Section title="Our Team">
           <div className="TeamMembers">
             {teamMembers.map((member, i) => (
               <TeamMember key={i} {...member} />
             ))}
           </div>
         </Section>
-        <ContactShortcut />
+        <Section
+          title="Our Values"
+          theme="beige"
+          transition={{ from: "white" }}
+        >
+          {this.values.map(this.renderValue)}
+        </Section>
+        <Section
+          background={bgStreet}
+          transition={{ from: "beige", reversed: true }}
+        >
+          <ContactShortcut />
+        </Section>
       </div>
     );
   }

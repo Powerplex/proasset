@@ -19,8 +19,8 @@ class TeamMember extends React.Component {
           <div>{firstname.toUpperCase()}</div>{" "}
           <span>{lastname.toUpperCase()}</span>
         </div>
-        <p className="TeamMember__job">- {job} -</p>
         <img src={picture} alt={`${firstname} ${lastname}`} />
+        <p className="TeamMember__job">- {job} -</p>
         <p className="TeamMember__description">{description}</p>
       </div>
     );

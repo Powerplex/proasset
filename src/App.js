@@ -18,12 +18,12 @@ class App extends Component {
   menu = [
     {
       path: "/",
-      label: "About Us",
+      label: "Invest",
       component: Home
     },
     {
-      path: "/team",
-      label: "Our team",
+      path: "/about-us",
+      label: "About Us",
       component: Team
     },
     {
@@ -33,7 +33,7 @@ class App extends Component {
     },
     {
       path: "/contact",
-      label: "Contact Us",
+      label: "Contact",
       component: Contact
     }
   ];

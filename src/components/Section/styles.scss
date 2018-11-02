@@ -2,10 +2,26 @@
 
 .Section {
   padding: 2rem;
-  background-color: $color-white;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+  &.Section-hasTransition {
+    padding-top: 12rem;
+  }
+
+  &.Section-theme-white {
+    background-color: $color-white;
+  }
+
+  &.Section-theme-beige {
+    background-color: $color-beige;
+  }
 
   @include desktop {
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 5rem;
     &:hover {
       .SectionTitleDecoration {
         background-color: $color-gold;

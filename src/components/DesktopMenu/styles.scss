@@ -4,25 +4,50 @@
   display: none;
 
   @include desktop {
+    margin-top: -6rem;
+    transition-duration: 0.5s;
     display: flex;
     flex-direction: row;
     justify-content: right;
+
+    &.revealed {
+      margin-top: 0;
+    }
   }
 
   z-index: 1000;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.726);
-  padding: 1rem 0rem;
+  // background-color: rgba(255, 255, 255, 0.726);
+  background-color: $color-white;
+  padding: 0rem 0rem;
 
   .DesktopMenu__content {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+
+    .logo-desktop {
+      margin-right: auto;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      img {
+        max-height: 6rem;
+      }
+      p {
+        display: inline-block;
+        max-width: 90px;
+        padding: 0;
+        color: $color-gold;
+        font-weight: bold;
+      }
+    }
 
     a {
       padding: 1rem;
-      color: $color-white;
+      color: $color-brown;
       font-size: 2rem;
       margin-right: 1rem;
       text-decoration: none;
@@ -39,7 +64,7 @@
 
     a:last-child {
       display: flex;
-      background-color: $color-white;
+      background-color: $color-beige;
       color: $color-gold;
       font-weight: bold;
       border-radius: 0.5rem;

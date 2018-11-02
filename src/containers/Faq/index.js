@@ -3,6 +3,8 @@ import PageHero from "components/PageHero";
 import Section from "components/Section";
 import ContactShortcut from "components/ContactShortcut";
 
+import bgStreet from "assets/images/bg-street.png";
+
 import { COMPANY_NAME } from "const";
 
 class Faq extends React.Component {
@@ -61,7 +63,12 @@ class Faq extends React.Component {
             tax, financial or investment advice when necessary.
           </p>
         </Section>
-        <ContactShortcut />
+        <Section
+          background={bgStreet}
+          transition={{ from: "white", reversed: true }}
+        >
+          <ContactShortcut />
+        </Section>
       </div>
     );
   }

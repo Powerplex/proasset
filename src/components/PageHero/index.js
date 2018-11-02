@@ -11,15 +11,17 @@ import "./styles.scss";
 class PageHero extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     img: PropTypes.string
   };
   render() {
-    const { title, img } = this.props;
+    const { title, subtitle, img } = this.props;
     return (
       <div className={classNames("PageHero", { withImage: !!img })}>
         <Centered>
           {/* <img src={logo} alt="logo" className="PageHero__logo" /> */}
-          <h1>{title}</h1>
+          <h1 className="PageHero__title">{title}</h1>
+          {subtitle && <h2 className="PageHero__subtitle">{subtitle}</h2>}
           {img && <img className="PageHero__img" src={img} alt="skyscrapers" />}
         </Centered>
       </div>
