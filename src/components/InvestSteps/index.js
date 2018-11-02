@@ -1,5 +1,6 @@
 import React from "react";
 import userSVG from "assets/svg/user.svg";
+import profitSVG from "assets/svg/bars.svg";
 
 import "./styles.scss";
 
@@ -40,6 +41,10 @@ class InvestSteps extends React.Component {
       <div className="InvestSteps">
         <img src={userSVG} alt="you" />
         {steps.map(this.renderStep)}
+        <div className="ProfitStep">
+          <img src={profitSVG} alt="profit" />
+          <p>Profit</p>
+        </div>
       </div>
     );
   }

@@ -4,6 +4,7 @@ import TeamMember from "components/TeamMember";
 import Section from "components/Section";
 import ContactShortcut from "components/ContactShortcut";
 import CompanyValue from "components/CompanyValue";
+import InvestmentScheme from "components/InvestmentScheme";
 
 import { COMPANY_NAME } from "const";
 
@@ -90,6 +91,11 @@ class Team extends React.Component {
         "Each project is followed and secured by a solicitor. All our partnerships are authorized fully regulated by their respective third-party regulatory body to exercise."
       ],
       img: ImageProtection
+    },
+    {
+      title: "Pro-ximity",
+      text: ["??????"],
+      img: ImageProtection
     }
   ];
 
@@ -98,8 +104,18 @@ class Team extends React.Component {
     return (
       <div className="AboutUs">
         <PageHero title="About Us" />
-        {/* <CatchPhrase text="We are here for you" /> */}
-        <Section title="Our Team">
+
+        <Section title="Our Values" theme="white">
+          <div className="OurValues">{this.values.map(this.renderValue)}</div>
+        </Section>
+        <Section
+          title="Property Investment Scheme"
+          theme="beige"
+          transition={{ from: "white" }}
+        >
+          <InvestmentScheme />
+        </Section>
+        <Section title="Our Team" theme="white" transition={{ from: "beige" }}>
           <div className="TeamMembers">
             {teamMembers.map((member, i) => (
               <TeamMember key={i} {...member} />
@@ -107,15 +123,8 @@ class Team extends React.Component {
           </div>
         </Section>
         <Section
-          title="Our Values"
-          theme="beige"
-          transition={{ from: "white" }}
-        >
-          {this.values.map(this.renderValue)}
-        </Section>
-        <Section
           background={bgStreet}
-          transition={{ from: "beige", reversed: true }}
+          transition={{ from: "white", reversed: true }}
         >
           <ContactShortcut />
         </Section>

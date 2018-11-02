@@ -19,6 +19,7 @@ class CompanyValue extends React.Component {
           reverse
         })}
       >
+        {img !== undefined && <img src={img} alt={title} />}
         <div className="CompanyValue__content">
           <h3 className="CompanyValue__title">{title}</h3>
           <div className="CompanyValue__content__text">
@@ -27,7 +28,6 @@ class CompanyValue extends React.Component {
             ))}
           </div>
         </div>
-        {img !== undefined && <img src={img} alt={title} />}
       </div>
     );
   }

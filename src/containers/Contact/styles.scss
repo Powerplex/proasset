@@ -1,6 +1,40 @@
 @import "styles/variables.scss";
 
-.Contact__form {
-  background-color: $color-white;
-  // padding: 4rem 0rem;
+.ContactInformations,
+.ContactEmail,
+.ContactPhone {
+  margin: auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+  }
+
+  .ContactAdress__company {
+    font-weight: bold;
+    color: $color-gold;
+  }
+}
+
+.ContactEmail,
+.ContactPhone {
+  border-radius: 1rem;
+  line-height: 6rem;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+.Map {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  border: 0.4rem solid $color-gold;
+  margin-bottom: 4rem;
 }

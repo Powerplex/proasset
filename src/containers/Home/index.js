@@ -31,9 +31,9 @@ class Home extends React.Component {
               converted into a valuable asset.
             </p>
             <p>
-              We specialise in acquiring smelly houses and houses of multiple
-              occupations and valorize them into quality and functional houses
-              for the community.
+              We specialize in acquiring individual houses and houses of
+              multiple occupations needing renovation and upgrade them into
+              quality and functional houses for the community.
             </p>
             <p>
               As investing in property is passive incoe-making and

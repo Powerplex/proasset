@@ -24,7 +24,7 @@ class Faq extends React.Component {
             your investment journey.
           </p>
         </Section>
-        <Section title="What are the guarantees?">
+        <Section title="What are the guarantees?" theme="beige">
           <p>
             At {COMPANY_NAME}, every project is conscientiously analized to
             ensure the highest profitability.{" "}
@@ -41,7 +41,7 @@ class Faq extends React.Component {
             operates with worldwide majors investors.
           </p>
         </Section>
-        <Section title="How is the money transfer secured ?">
+        <Section title="How is the money transfer secured ?" theme="beige">
           <p>
             For each funding, we work with the leading foreign exchance business
             based in London: <span>CentralFX</span>.

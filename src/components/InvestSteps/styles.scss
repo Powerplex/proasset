@@ -9,13 +9,40 @@ $losange-fill: $color-beige;
   flex-direction: column;
   // background-color: white;
 
-  > img {
+  img {
     width: 100px;
     margin: auto;
     display: none;
     @include desktop {
       display: block;
     }
+  }
+}
+
+.ProfitStep {
+  display: none;
+  position: relative;
+  color: $color-gold;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  border: 0.5rem solid $color-gold;
+  border-radius: 2rem;
+  width: 18rem;
+  background-color: white;
+  margin-top: 2rem;
+
+  @include desktop {
+    display: block;
+  }
+  &::before {
+    position: absolute;
+    top: -30px;
+    content: "";
+    width: $losange-border;
+    margin-left: calc(#{$losange-border} / -2);
+    height: 30px;
+    background-color: $color-gold;
   }
 }
 

@@ -59,7 +59,7 @@
       }
 
       &:hover {
-        background-color: $color-gold-hover;
+        // background-color: $color-gold;
       }
 
       img {
@@ -71,6 +71,7 @@
       p {
         font-size: 1.2rem;
         color: $color-white;
+        font-weight: bold;
         padding: 0;
         margin: 0;
       }

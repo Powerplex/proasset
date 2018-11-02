@@ -4,29 +4,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   box-sizing: border-box;
+  background-color: $color-white;
+  border: 0.5rem solid $color-beige;
+  padding: 1rem;
+
   width: 100%;
   margin-bottom: 2rem;
 
   @include tablet {
-    flex-direction: row;
-    &.reverse {
-      flex-direction: row-reverse;
-    }
+    width: 48%;
   }
 
   @include desktop {
-    flex-direction: row;
-    &.reverse {
-      flex-direction: row-reverse;
-    }
+    width: 48%;
+  }
+
+  &:hover {
+    // background-color: $color-brown;
   }
 
   .CompanyValue__title {
-    font-size: 4rem;
+    font-size: 3rem;
     color: $color-brown;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    // padding-top: 3rem;
+    padding-bottom: 1rem;
     font-weight: bold;
   }
 
@@ -35,14 +38,13 @@
     flex-direction: column;
 
     .CompanyValue__content__text {
-      background-color: $color-white;
       border-radius: 0rem;
       line-height: 2rem;
-      text-align: justify;
+      font-size: 10rem;
     }
   }
 
   img {
-    max-height: 150px;
+    max-height: 100px;
   }
 }

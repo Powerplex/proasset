@@ -12,13 +12,19 @@ h1 {
 } /* =24px */
 
 p {
-  font-size: 1.8rem;
-  line-height: 2.2rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
   padding-bottom: 2rem;
 
   span {
     font-weight: bold;
   }
+}
+
+.leaflet-container {
+  height: 400px;
+  width: 80%;
+  margin: 0 auto;
 }
 
 #App {

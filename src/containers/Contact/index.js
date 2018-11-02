@@ -1,66 +1,61 @@
 import React from "react";
-import { Formik } from "formik";
+import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 import PageHero from "components/PageHero";
+import Section from "components/Section";
+
+import mapImg from "assets/images/map.png";
+
+import { COMPANY_NAME } from "const";
+
+import "./styles.scss";
 
 class Contact extends React.Component {
+  email = "info@pro-assetinvestments.com";
+  phoneNumber = "(04) 229 4091 0946";
+
+  renderMap() {
+    return <img className="Map" src={mapImg} alt="map" />;
+  }
+
   render() {
     return (
       <div className="Contact">
-        <PageHero title="Contact us " />
-        <Formik
-          initialValues={{ email: "", password: "" }}
-          validate={values => {
-            let errors = {};
-            if (!values.email) {
-              errors.email = "Required";
-            } else if (
-              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-            ) {
-              errors.email = "Invalid email address";
-            }
-            return errors;
-          }}
-          onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-          }}
+        <PageHero title="Contact us" />
+        <Section title="Our Address">
+          <div className="ContactInformations">
+            <div className="ContactAdress">
+              <p className="ContactAdress__company">{COMPANY_NAME}</p>
+              <p>33a Milton Road</p>
+              <p>Hampton Middlesex</p>
+              <p>TW12 2LL</p>
+            </div>
+            ​
+          </div>
+        </Section>
+        <Section
+          title="Email"
+          theme="beige"
+          transition={{ from: "white", reversed: false }}
         >
-          {({
-            values,
-            errors,
-            touched,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-            isSubmitting
-            /* and other goodies */
-          }) => (
-            <form onSubmit={handleSubmit}>
-              <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-              />
-              {errors.email && touched.email && errors.email}
-              <input
-                type="password"
-                name="password"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.password}
-              />
-              {errors.password && touched.password && errors.password}
-              <button type="submit" disabled={isSubmitting}>
-                Submit
-              </button>
-            </form>
-          )}
-        </Formik>
+          <p className="ContactEmail">
+            <FaEnvelope />
+            Email: {this.email}
+          </p>
+        </Section>
+        <Section title="Phone Number" transition={{ from: "beige" }}>
+          <p className="ContactPhone">
+            <FaPhone />
+            {this.phoneNumber}
+          </p>
+        </Section>
+        <Section
+          title="Locate Us"
+          theme="beige"
+          transition={{ from: "white", reversed: true }}
+        >
+          {this.renderMap()}
+        </Section>
       </div>
     );
   }
