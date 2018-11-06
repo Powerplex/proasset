@@ -2,6 +2,12 @@ import React from "react";
 
 import "./styles.scss";
 
+import imgPercent from "assets/images/main-percent.png";
+import imgNofees from "assets/images/main-nofees.png";
+import imgManage from "assets/images/main-nomanage.png";
+import imgDirect from "assets/images/main-direct.png";
+console.log("");
+
 class InvestSummary extends React.Component {
   render() {
     return (
@@ -17,19 +23,19 @@ class InvestSummary extends React.Component {
         <div className="InvestSummary__image" />
         <div className="InvestSummary__list">
           <div className="InvestSummary__list-item">
-            <img src="" alt="???" />
+            <img src={imgDirect} alt="Direct loans" />
             <p>Direct loans</p>
           </div>
           <div className="InvestSummary__list-item">
-            <img src="" alt="???" />
+            <img src={imgPercent} alt="Rates between 6% and 15%" />
             <p>Rates between 6% and 15%</p>
           </div>
           <div className="InvestSummary__list-item">
-            <img src="" alt="???" />
+            <img src={imgNofees} alt="No fees and online" />
             <p>No fees and online</p>
           </div>
           <div className="InvestSummary__list-item">
-            <img src="" alt="???" />
+            <img src={imgManage} alt="No management" />
             <p>No management</p>
           </div>
         </div>

@@ -1,6 +1,13 @@
 @import "styles/variables.scss";
 
-.Home__content {
-  // background-color: white;
-  // padding-bottom: 5rem;
+.WhyInvest {
+  .Centered {
+    p:first-of-type {
+      color: $color-gold;
+    }
+    p {
+      padding-bottom: 4rem;
+      text-align: center;
+    }
+  }
 }

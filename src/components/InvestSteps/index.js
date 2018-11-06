@@ -2,18 +2,20 @@ import React from "react";
 import userSVG from "assets/svg/user.svg";
 import profitSVG from "assets/svg/bars.svg";
 
+import { COMPANY_NAME } from "const";
+
 import "./styles.scss";
 
 const steps = [
-  "On the one hand, PAI offers individuals to finance real estate properties",
-  "On the other, individuals are looking for higher returns for their savings",
-  "PAI allows to investors to discover these opportunities and offersto participate in the financing of the property",
-  "An investment proposal is presented (nature, amount of investment, guarantees and insurance)",
-  "As a future investor, you decide to continue the adventure with us",
-  "You complete and sign a personnalized loan agreement",
-  "You pay the funds and become an investor",
-  "Property is acquired and renovations begin",
-  "12 to 36 months later, you are refunded and you receive your interest."
+  `On the one hand, ${COMPANY_NAME} offers individuals to finance real estate properties`,
+  `On the other, individuals are looking for higher returns for their savings`,
+  `${COMPANY_NAME} allows to investors to discover these opportunities and offersto participate in the financing of the property`,
+  `A fully detailed investment proposal is presented`,
+  `As a future investor, you decide to continue the adventure with us`,
+  `You complete and sign a personnalized loan agreement`,
+  `You pay the funds and become an investor`,
+  `Pro-Asset Investment's acquire, renovate and manages the property`,
+  `12 to 36 months later, you are refunded and you receive your interest.`
 ];
 
 class InvestSteps extends React.Component {

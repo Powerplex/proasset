@@ -11,7 +11,12 @@ class ContactShortcut extends React.Component {
       <div className="ContactShortcut">
         <div className="ContactShortcut__content">
           <p>A question ? Do not hesitate and contact one of our experts.</p>
-          <Link exact to="/contact" key="/contact">
+          <Link
+            exact
+            to="/contact"
+            key="/contact"
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <FaEnvelope />
             Contact Us
           </Link>

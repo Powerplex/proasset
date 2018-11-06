@@ -8,7 +8,7 @@ import InvestSteps from "components/InvestSteps";
 
 import { COMPANY_NAME } from "const";
 
-import bgStreet from "assets/images/bg-street.png";
+import bgStreet from "assets/images/bg-skyscrapers3.jpg";
 
 import "./styles.scss";
 
@@ -19,13 +19,14 @@ class Home extends React.Component {
         <PageHero
           title={COMPANY_NAME.toUpperCase()}
           subtitle={"Let your savings work for you"}
+          high
         />
         {/* <CatchPhrase text="Let your savings work for you" /> */}
         <div className="Home__content">
           <Section>
             <InvestSummary />
           </Section>
-          <Section title={`Why ${COMPANY_NAME} ?`}>
+          <Section className="WhyInvest" title={`Why ${COMPANY_NAME} ?`}>
             <p style={{ fontWeight: "bold" }}>
               At {COMPANY_NAME}, we believe every under-utilised home can be
               converted into a valuable asset.

@@ -13,7 +13,9 @@ class Section extends Component {
     centerText: PropTypes.bool,
     theme: PropTypes.string, // gold or beige,
     background: PropTypes.string,
-    transition: PropTypes.object
+    transition: PropTypes.object,
+    className: PropTypes.any,
+    smallTitle: PropTypes.bool
   };
   render() {
     const {
@@ -21,7 +23,9 @@ class Section extends Component {
       theme,
       title,
       background,
-      transition
+      transition,
+      className,
+      smallTitle = false
       // centerText = false
     } = this.props;
     const classes = [
@@ -36,10 +40,10 @@ class Section extends Component {
     if (background) styles.backgroundImage = `url(${background})`;
 
     return (
-      <div className={classes} style={styles}>
+      <div className={classes + " " + className} style={styles}>
         {transition && <SectionSeparator transition={transition} />}
         <Centered>
-          {title && <SectionTitle text={title} />}
+          {title && <SectionTitle text={title} smallTitle={smallTitle} />}
           {children}
         </Centered>
       </div>

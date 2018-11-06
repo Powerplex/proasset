@@ -5,12 +5,23 @@
   color: $color-brown;
   font-weight: bold;
   padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0rem;
   align-items: center;
   top: 0;
   position: sticky;
   display: flex;
   justify-content: center;
+  text-align: center;
+
+  &.smallTitle {
+    h2 {
+      font-size: 2rem;
+      @include desktop {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
 
   h2 {
     font-size: 3rem;

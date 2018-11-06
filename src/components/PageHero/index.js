@@ -12,12 +12,20 @@ class PageHero extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
-    img: PropTypes.string
+    img: PropTypes.string,
+    withGradient: PropTypes.bool,
+    high: PropTypes.bool
   };
   render() {
-    const { title, subtitle, img } = this.props;
+    const { title, subtitle, withGradient, img, high } = this.props;
     return (
-      <div className={classNames("PageHero", { withImage: !!img })}>
+      <div
+        className={classNames("PageHero", {
+          withImage: !!img,
+          withGradient,
+          high
+        })}
+      >
         <Centered>
           {/* <img src={logo} alt="logo" className="PageHero__logo" /> */}
           <h1 className="PageHero__title">{title}</h1>

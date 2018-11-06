@@ -1,9 +1,24 @@
 @import "styles/variables.scss";
 
 .PageHero {
+  &.withGradient {
+    background: rgb(51, 25, 0);
+    background: linear-gradient(
+      20deg,
+      rgba(51, 25, 0, 1) 0%,
+      rgba(221, 165, 32, 1) 38%,
+      rgba(255, 255, 255, 1) 93%
+    );
+  }
+
   @include desktop {
-    padding-top: 6rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
     text-align: center;
+    &.high {
+      padding-bottom: 10rem;
+      padding-top: 12rem;
+    }
   }
 
   .Centered {

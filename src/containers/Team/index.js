@@ -16,7 +16,9 @@ import hugoPicture from "assets/images/team-hugo.png";
 import ImageProfessionalism from "assets/images/value-professionalism.png";
 import ImageProfitability from "assets/images/value-profitability.png";
 import ImageProtection from "assets/images/value-protection.png";
-import bgStreet from "assets/images/bg-street.png";
+import ImageProximity from "assets/images/value-proximity.png";
+
+import bgStreet from "assets/images/bg-skyscrapers3.jpg";
 
 import "./styles.scss";
 
@@ -74,7 +76,7 @@ class Team extends React.Component {
     {
       title: "Pro-fessionalism",
       text: [
-        "As a professional property investment company operating in the UK, we care about quality.",
+        "As a professional property investment company operating in the UK, we are committed to quality.",
         "Our company works closely with highly-experienced team intergrated into the English real-estate market for more than 10 years."
       ],
       img: ImageProfessionalism
@@ -97,8 +99,11 @@ class Team extends React.Component {
     },
     {
       title: "Pro-ximity",
-      text: ["??????"],
-      img: ImageProtection
+      text: [
+        "At Pro-Asset Investment's, we take the time with the investors to know them and their financial goals.",
+        "We work with transparency to make our investors true wealth partners. And, we also make sure they fully understand their investment by providing a detailled investment proposal and answeing any question."
+      ],
+      img: ImageProximity
     }
   ];
 
@@ -106,7 +111,7 @@ class Team extends React.Component {
     const { teamMembers, teamMembers2 } = this;
     return (
       <div className="AboutUs">
-        <PageHero title="About Us" />
+        <PageHero title="About Us" withGradient />
 
         <Section title="Our Values" theme="white">
           <div className="OurValues">{this.values.map(this.renderValue)}</div>

@@ -37,9 +37,11 @@ p {
   background-color: $color-white;
   // max-height: 100vh;
   overflow: auto;
-  background-image: url("~assets/images/bg-skyscrapers3.jpg");
+  background-image: url("~assets/images/bg-street.png");
+  // background-image: url("~assets/images/bg-skyscrapers3.jpg");
   background-attachment: fixed;
-  background-position: top;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #page-container {

@@ -21,7 +21,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="Contact">
-        <PageHero title="Contact us" />
+        <PageHero title="Contact us" withGradient />
         <Section>
           <div className="ContactInformations">
             <div className="ContactAdress">
