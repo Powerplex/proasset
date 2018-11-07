@@ -2,6 +2,10 @@
 
 .PageHero {
   &.withGradient {
+    @include mobile {
+      padding-bottom: 3rem;
+    }
+
     background: rgb(51, 25, 0);
     background: linear-gradient(
       20deg,
@@ -9,6 +13,14 @@
       rgba(221, 165, 32, 1) 38%,
       rgba(255, 255, 255, 1) 93%
     );
+  }
+
+  @include mobile {
+    padding-top: 7rem;
+  }
+
+  @include tablet {
+    padding-top: 7rem;
   }
 
   @include desktop {
@@ -33,6 +45,7 @@
   }
 
   .PageHero__title,
+  .PageHero__secondtitle,
   .PageHero__subtitle {
     color: $color-white;
 
@@ -45,15 +58,30 @@
     font-weight: bold;
     font-size: 5rem;
     line-height: 6rem;
-    padding: 1rem;
+    // padding: 1rem;
     text-align: center;
 
     @include desktop {
       font-size: 8rem;
       line-height: 9rem;
       padding: 0;
-      padding-bottom: 4rem;
+      // padding-bottom: 4rem;
       padding-top: 5rem;
+    }
+  }
+
+  .PageHero__secondtitle {
+    // font-weight: bold;
+    font-size: 3rem;
+    line-height: 4rem;
+    padding: 0;
+    text-align: center;
+
+    @include desktop {
+      font-size: 4rem;
+      line-height: 5rem;
+      padding: 0;
+      padding-bottom: 4rem;
     }
   }
 

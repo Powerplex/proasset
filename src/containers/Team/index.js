@@ -18,7 +18,7 @@ import ImageProfitability from "assets/images/value-profitability.png";
 import ImageProtection from "assets/images/value-protection.png";
 import ImageProximity from "assets/images/value-proximity.png";
 
-import bgStreet from "assets/images/bg-skyscrapers3.jpg";
+import bgStreet from "assets/images/bg-street.png";
 
 import "./styles.scss";
 

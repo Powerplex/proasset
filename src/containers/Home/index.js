@@ -8,7 +8,7 @@ import InvestSteps from "components/InvestSteps";
 
 import { COMPANY_NAME } from "const";
 
-import bgStreet from "assets/images/bg-skyscrapers3.jpg";
+import bgStreet from "assets/images/bg-street.png";
 
 import "./styles.scss";
 
@@ -17,7 +17,8 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <PageHero
-          title={COMPANY_NAME.toUpperCase()}
+          title="PRO ASSET"
+          secondTitle="INVESTMENT'S"
           subtitle={"Let your savings work for you"}
           high
         />

@@ -16,6 +16,7 @@ class BurgerMenu extends React.Component {
     const { isMenuOpen, menu, onChange, onClose } = this.props;
     return (
       <MobileMenu
+        className="zdezdze"
         right
         scaleDown
         pageWrapId={"main-container"}

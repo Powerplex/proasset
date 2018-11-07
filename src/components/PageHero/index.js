@@ -11,13 +11,21 @@ import "./styles.scss";
 class PageHero extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    secondTitle: PropTypes.string,
     subtitle: PropTypes.string,
     img: PropTypes.string,
     withGradient: PropTypes.bool,
     high: PropTypes.bool
   };
   render() {
-    const { title, subtitle, withGradient, img, high } = this.props;
+    const {
+      title,
+      secondTitle,
+      subtitle,
+      withGradient,
+      img,
+      high
+    } = this.props;
     return (
       <div
         className={classNames("PageHero", {
@@ -29,7 +37,10 @@ class PageHero extends React.Component {
         <Centered>
           {/* <img src={logo} alt="logo" className="PageHero__logo" /> */}
           <h1 className="PageHero__title">{title}</h1>
-          {subtitle && <h2 className="PageHero__subtitle">{subtitle}</h2>}
+          {secondTitle && (
+            <h2 className="PageHero__secondtitle">{secondTitle}</h2>
+          )}
+          {subtitle && <h3 className="PageHero__subtitle">{subtitle}</h3>}
           {img && <img className="PageHero__img" src={img} alt="skyscrapers" />}
         </Centered>
       </div>

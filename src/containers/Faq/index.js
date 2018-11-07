@@ -3,7 +3,7 @@ import PageHero from "components/PageHero";
 import Section from "components/Section";
 import ContactShortcut from "components/ContactShortcut";
 
-import bgStreet from "assets/images/bg-skyscrapers3.jpg";
+import bgStreet from "assets/images/bg-street.png";
 
 import { COMPANY_NAME } from "const";
 

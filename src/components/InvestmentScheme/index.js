@@ -19,7 +19,7 @@ const steps = [
   },
   {
     prefix: "Renovation",
-    text: `The property is then refurbished according to ${COMPANY_NAME} quality standards. ${COMPANY_NAME} works with recommanded and expriencd builders.`
+    text: `The property is then refurbished according to ${COMPANY_NAME} quality standards. ${COMPANY_NAME} works with recommanded and experienced builders.`
   }
 ];
 

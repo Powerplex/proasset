@@ -6,7 +6,6 @@ import imgPercent from "assets/images/main-percent.png";
 import imgNofees from "assets/images/main-nofees.png";
 import imgManage from "assets/images/main-nomanage.png";
 import imgDirect from "assets/images/main-direct.png";
-console.log("");
 
 class InvestSummary extends React.Component {
   render() {

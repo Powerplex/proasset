@@ -6,7 +6,7 @@
   width: 36px;
   height: 30px;
   right: 1rem;
-  top: 2rem;
+  top: 1.5rem;
 
   @include desktop {
     display: none;
@@ -15,8 +15,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: $color-white;
-  border: 1px solid $color-gold;
+  background: $color-gold;
 }
 
 /* Position and sizing of clickable cross button */
@@ -74,5 +73,5 @@ a.bm-item {
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.619) !important;
 }
