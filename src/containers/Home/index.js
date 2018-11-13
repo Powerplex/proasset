@@ -17,7 +17,7 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <PageHero
-          title="PRO ASSET"
+          title="PRO-ASSET"
           secondTitle="INVESTMENT'S"
           subtitle={"Let your savings work for you"}
           high
