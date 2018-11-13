@@ -29,7 +29,19 @@ class Team extends React.Component {
       firstname: "Keydorlane",
       lastname: "Lancreot",
       job: "Director",
-      description: `Founding director of ${COMPANY_NAME}, Keydorlane maximise the company's asset value trough systemised management and experienced team deployment.`
+      description: `Founding director of ${COMPANY_NAME}, Keydorlane is
+      an devoted entrepreneur.
+      She began with real estate
+      5 years ago alongside with
+      the creation of her mother's
+      homestaging company.
+      Keydorlane's reponsabilities
+      are to maximize the
+      company's asset value
+      through her analytical skills,
+      systemized management
+      and experienced team
+      deployment.`
     },
     {
       picture: imranPicture,
@@ -37,7 +49,7 @@ class Team extends React.Component {
       lastname: "Lokhon",
       job: "Non Executive Director",
       description:
-        "Professional investor for a decade and mentor, Imran has a guenuine and high valuable experience in the UK property investment process."
+        "Entrepreneur, mentor and professional investor, Imran has been representing the community near Oxford within local government. for a decade. Since 2008, he has also gained a genuine and high valuable experience in the UK property investment process. Within Pro-Asset Investment's, Imran brings his sharpen advices regarding investments strategies."
     }
   ];
 
@@ -48,7 +60,7 @@ class Team extends React.Component {
       lastname: "Mason",
       job: "Accountant",
       description:
-        "Director of Aviscompany. Brian provides outsourced financial management advices across accounting,, business advice and taxation."
+        "Director of Aviscompany, Brian has been working for Alviscompany for 15 years. Within Pro-Asset Investment's, Brian provide outsourced financial management advices across accounting, business advice and taxation."
     },
     {
       picture: robertPicture,
@@ -56,7 +68,7 @@ class Team extends React.Component {
       lastname: "Joesph",
       job: "Exchange Currency Specialist",
       description:
-        "Fouding director of CenttralFX. Robert has a expensive experience in taloring foreign currency strategies and protecting profit margins."
+        "Fouding director of CenttralFX, Robert is a specialist in making comprehensive solutions for international payments. Within the company, Robert brings his 15-year extensive experience in taloring foreign currency strategies and protecting profit margins."
     },
     {
       picture: hugoPicture,
@@ -64,7 +76,7 @@ class Team extends React.Component {
       lastname: "Beardsall",
       job: "Sourcing Manager",
       description:
-        "Investor and managing director of MySourcingHub. Hugo has a hiçgh experience dealing with estate and sourcing agents."
+        "Professional Investor and author, Hugo is the managing director of MySourcingHub website. With his history as estate agent, Hugo brings into Pro-Asset Investment's company, his proven experience dealing with estate and sourcing agents."
     }
   ];
 
