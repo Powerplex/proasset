@@ -29,7 +29,7 @@ class Home extends React.Component {
           </Section>
           <Section className="WhyInvest" title={`Why ${COMPANY_NAME} ?`}>
             <p style={{ fontWeight: "bold" }}>
-              At {COMPANY_NAME}, we believe every under-utilised home can be
+              At {COMPANY_NAME}, we believe every under-utilized home can be
               converted into a valuable asset.
             </p>
             <p>
