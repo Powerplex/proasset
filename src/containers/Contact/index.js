@@ -12,7 +12,7 @@ import "./styles.scss";
 
 class Contact extends React.Component {
   email = "info@pro-assetinvestments.com";
-  phoneNumber = "(04) 229 4091 0946";
+  phoneNumber = "+44 (0) 20 3290 0550";
 
   renderMap() {
     return <img className="Map" src={mapImg} alt="map" />;
